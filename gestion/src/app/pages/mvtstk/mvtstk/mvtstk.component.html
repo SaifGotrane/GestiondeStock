@@ -1,0 +1,60 @@
+<div class="col mt-3">
+  <div class="row" style="margin: 7px">
+    <div class="col" style="padding: 0">
+      <h1>Mouvements de stock</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" style="margin: 0">
+      <!-- Premier accordéon -->
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+          <!-- En-tête de l'accordéon -->
+          <div class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="display:contents;">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </button>
+          </div>
+
+          <!-- Corps de l'accordéon -->
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deuxième accordéon -->
+      <div class="accordion" id="accordionExample2">
+        <div class="accordion-item">
+          <!-- En-tête de l'accordéon -->
+          <div class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="display: contents">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </button>
+          </div>
+
+          <!-- Corps de l'accordéon -->
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample2" style="max-height: 300px; overflow-y: scroll;">
+            <div class="accordion-body">
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="row text-center">
+    <app-pagination></app-pagination>
+  </div>
+</div>
+

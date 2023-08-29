@@ -1,0 +1,23 @@
+<div class="main-container">
+  <div class="row min-height-600" style="display: flex;">
+    <div class="card col-md-2 menu-column" style="flex: 0 0 20%;">
+      <div class="col">
+        <div class="border-none" style="margin: 10px;">
+          <h4 class="menu-title mb-2">Gestion de stock</h4>
+        </div>
+        <div class="menu-content">
+          <app-menu></app-menu>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 background-grey border-none main-column" style="flex: 1; display: flex; flex-direction: column;">
+      <div class="min-height-80 p-3">
+        <app-header></app-header>
+      </div>
+      <div class="card main-content" style="flex: 1; min-height: 700px;">
+        <app-loader></app-loader>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

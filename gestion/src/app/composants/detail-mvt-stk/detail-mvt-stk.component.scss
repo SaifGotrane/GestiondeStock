@@ -1,0 +1,28 @@
+.product-container {
+  margin-bottom: 1px;
+}
+
+.product-image {
+  width: 80px; /* Reduced the width of the image */
+  height: 80px; /* Reduced the height of the image */
+}
+
+.details-section {
+  border-right: 1px solid #ccc;
+  padding: 5px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.detail-icon {
+  margin-right: 5px;
+  color: blue;
+}
+
+.action-button {
+  margin: 5px;
+}

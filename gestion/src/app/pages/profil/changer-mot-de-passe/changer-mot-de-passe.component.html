@@ -1,0 +1,37 @@
+<div class="row m-3">
+  <div class="card col-md-4 text-center" style="margin-right: 5px">
+    <div class="col">
+      <div class="mb-3 mt-3">
+        <img src="/assets/images/user/avatar-2.jpg" class="rounded-circle" alt="user" width="200px" height="200px">
+      </div>
+
+      <div class="mb-3">
+        <h2>Nom Prénom</h2>
+        <small class="form-text text-muted">Adresse, Ville, 12456</small>
+      </div>
+    </div>
+  </div>
+  <div class="card col-md-7">
+    <form class="mt-5">
+      <div class="mb-3 ">
+        <input type="email" class="form-control" name="ancienmotdepasse" placeholder="Ancien mot de passe" [(ngModel)]="ancienMoDePasse">
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" name="nouveaumotdepasse"placeholder="Nouveau mot de passe"> <!--[(ngModel)]="changerMotDePasseDTO.motDePasse"-->
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" name="confirmermotdepasse"placeholder="Confirmer mot de passe"> <!--[(ngModel)]="changerMotDePasseDTO.confirmerMotDePasse"-->
+      </div>
+    </form>
+    <div class="col m-3" style="text-align: right">
+      <button class="btn btn-danger" style="margin-right: 10px" (click)="cancel()">
+        <i class="fas fa-ban">&nbsp;</i> Annuler
+      </button>
+      <button class="btn btn-primary" > <!--(click)="changerMotDePasseUtilisateur()"-->
+        <i class="fas fa-save ">&nbsp;</i>Enregistrer
+      </button>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,75 @@
+<div class="product-container">
+  <div class="row custom-border">
+    <div class="col-2 details-section">
+      <img src="assets/images/user/avatar-2.jpg" class="product-image" alt="Product Image">
+    </div>
+
+    <!-- Détails de l'article -->
+    <div class="col details-section">
+      <div class="detail-row">
+        <i class="fa-solid fa-circle-info detail-icon"></i>&nbsp;<!--{{ utilisateurDto.nom }}-->
+      </div>
+      <div class="detail-row">
+        <i class="fa-solid fa-circle-info detail-icon"></i>&nbsp;<!--{{ utilisateurDto.prenom }}-->
+      </div>
+      <div class="detail-row">
+        <i class="fa-solid fa-phone green-color"></i>&nbsp; <!--{{ utilisateurDto.telephone }}-->
+      </div>
+    </div>
+
+
+    <!-- Détails de la catégorie -->
+    <div class="col details-section">
+      <div class="col-md-10 ">
+        <div class="row">
+          <div class="col-md-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--{{ utilisateurDto.adresse }}--></div>
+          <div class="col-md-12"><i class="fa-solid fa-house blue-color"></i>&nbsp;<!--{{ utilisateurDto.codePostal }}--></div>
+          <div class="col-md-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--{{ utilisateurDto.ville }}--></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boutons d'action -->
+    <div class="col">
+      <div class="row" >
+        <div class="col-md-4">
+          <button type="button" class="btn btn-primary btn-spaced"> <!--(click)="modifierUser()"-->
+            <i class="fa-solid fa-pencil"></i> Modifier
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-danger btn-spaced" data-bs-toggle="modal" [attr.data-bs-target]="'#modalDeleteUser'"> <!-- + utilisateurDto.id-->
+            <i class="fa-solid fa-trash-can"></i> Supprimer
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-info btn-spaced">
+            <i class="fa-solid fa-list"></i> Détails
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modalDeleteUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> <!--{{ articleDto.id }}-->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Etes vous-sur de vouloir supprimer cet utilisateur ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="fa-solid fa-ban"></i>&nbsp;Annuler
+          </button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="confirmerEtSupprimerUser()">
+            <i class="fa-solid fa-trash-can"></i>&nbsp;Supprimer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

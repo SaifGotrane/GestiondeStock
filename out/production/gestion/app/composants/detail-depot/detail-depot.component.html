@@ -1,0 +1,72 @@
+<div class="product-container">
+  <div class="row custom-border">
+    <div class="col-2 details-section">
+      <img src="assets/images/depot.png" class="product-image" alt="Product Image" style="margin-left: 7px">
+    </div>
+
+    <!-- Détails du Depot -->
+    <div class="col details-section">
+      <div class="detail-row">
+        <i class="fa-solid fa-circle-info detail-icon"></i> <!--{{ depotDto.nom }}-->
+      </div>
+      <div class="detail-row">
+        <i class="fa-solid fa-circle-info detail-icon"></i> <!--{{ depotDto.id }}-->
+      </div>
+    </div>
+
+
+    <!-- Détails de son adresse -->
+    <div class="col details-section">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--{{ depotDto.adresse }}--></div>
+          <div class="col-md-12"><i class="fa-solid fa-house blue-color"></i>&nbsp;<!--{{ depotDto.ville }}--></div>
+          <div class="col-md-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--{{ depotDto.codePostal }}--></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boutons d'action -->
+    <div class="col">
+      <div class="row">
+        <div class="col-md-4">
+          <button type="button" class="btn btn-primary btn-spaced">  <!--(click)="modifierArticle()"-->
+            <i class="fa-solid fa-pencil"></i> Modifier
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-danger btn-spaced" data-bs-toggle="modal" [attr.data-bs-target]="'#modalDeleteDepot'"> <!-- + depotDto.id-->
+            <i class="fa-solid fa-trash-can"></i> Supprimer
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-info btn-spaced">
+            <i class="fa-solid fa-list"></i> Détails
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modalDeleteDepot" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> <!--{{ articleDto.id }}-->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Etes vous-sur de vouloir supprimer ce dépôt ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="fa-solid fa-ban"></i>&nbsp;Annuler
+          </button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="confirmerEtSupprimerDepot()">
+            <i class="fa-solid fa-trash-can"></i>&nbsp;Supprimer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
